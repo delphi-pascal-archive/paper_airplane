@@ -1,0 +1,247 @@
+<?xml version="1.0" standalone="yes"?>
+<airplane>
+	<constants>
+		<constant>
+			<name>width</name>
+			<value>210</value>
+		</constant>
+		<constant>
+			<name>height</name>
+			<value>298</value>
+		</constant>
+		<constant>
+			<name>w</name>
+			<value>width</value>
+		</constant>
+		<constant>
+			<name>h</name>
+			<value>height</value>
+		</constant>
+		<constant>
+			<name>alpha</name>
+			<value>pi / 5</value>
+		</constant>
+		<constant>
+			<name>h0</name>
+			<value>w / 8</value>
+		</constant>
+		<constant>
+			<name>f</name>
+			<value>w / 10</value>
+		</constant>
+		<constant>
+			<name>a</name>
+			<value>(w / 2) + ((Sqr(f)) / w) - f</value>
+		</constant>
+		<constant>
+			<name>b</name>
+			<value>a * (w / (w - (2 * f)))</value>
+		</constant>
+		<constant>
+			<name>c</name>
+			<value>(Sqr(w)) / (2 * ((2 * f) + w))</value>
+		</constant>
+	</constants>
+	<basepoints>
+		<point>
+			<x>w / 2</x>
+			<y>h</y>
+		</point>
+		<point>
+			<x>0</x>
+			<y>h - (w / 2)</y>
+		</point>
+		<point>
+			<x>w</x>
+			<y>h - (w / 2)</y>
+		</point>
+		<point>
+			<x>a</x>
+			<y>h - (w / 2)</y>
+		</point>
+		<point>
+			<x>0</x>
+			<y>(h - (w / 2)) - b</y>
+		</point>
+		<point>
+			<x>w - a</x>
+			<y>h - (w / 2)</y>
+		</point>
+		<point>
+			<x>w</x>
+			<y>(h - (w / 2)) - b</y>
+		</point>
+		<point>
+			<x>c</x>
+			<y>(h - (w / 2)) - c</y>
+		</point>
+		<point>
+			<x>w - c</x>
+			<y>(h - (w / 2)) - c</y>
+		</point>
+		<point>
+			<x>w / 2</x>
+			<y>0</y>
+		</point>
+		<point>
+			<x>(w / 2) - h0</x>
+			<y>0</y>
+		</point>
+		<point>
+			<x>(w / 2) - h0</x>
+			<y>h - w</y>
+		</point>
+		<point>
+			<x>(w / 2) + h0</x>
+			<y>0</y>
+		</point>
+		<point>
+			<x>(w / 2) + h0</x>
+			<y>h - w</y>
+		</point>
+		<point>
+			<x>0</x>
+			<y>0</y>
+		</point>
+		<point>
+			<x>w</x>
+			<y>0</y>
+		</point>
+		<point>
+			<x>w</x>
+			<y>h</y>
+		</point>
+		<point>
+			<x>0</x>
+			<y>h</y>
+		</point>
+	</basepoints>
+	<sheet>
+		<point>15</point>
+		<point>16</point>
+		<point>17</point>
+		<point>18</point>
+	</sheet>
+	<actions>
+		<action>
+			<p1>2</p1>
+			<p2>1</p2>
+			<targets>
+				<target>1</target>
+			</targets>
+			<angle>pi</angle>
+		</action>
+		<action>
+			<p1>1</p1>
+			<p2>3</p2>
+			<targets>
+				<target>1</target>
+			</targets>
+			<angle>pi</angle>
+		</action>
+		<action>
+			<p1>2</p1>
+			<p2>3</p2>
+			<targets>
+				<target>1</target>
+				<target>2</target>
+				<target>3</target>
+			</targets>
+			<angle>pi</angle>
+		</action>
+		<action>
+			<p1>5</p1>
+			<p2>4</p2>
+			<targets>
+				<target>1</target>
+				<target>4</target>
+				<target>2</target>
+			</targets>
+			<angle>pi</angle>
+		</action>
+		<action>
+			<p1>6</p1>
+			<p2>7</p2>
+			<targets>
+				<target>3</target>
+				<target>4</target>
+				<target>1</target>
+			</targets>
+			<angle>pi</angle>
+		</action>
+		<action>
+			<p1>9</p1>
+			<p2>8</p2>
+			<targets>
+				<target>10</target>
+				<target>2</target>
+				<target>3</target>
+			</targets>
+			<angle>pi</angle>
+		</action>
+		<action>
+			<p1>10</p1>
+			<p2>1</p2>
+			<targets>
+				<target>10</target>
+				<target>1</target>
+				<target>2</target>
+				<target>6</target>
+				<target>7</target>
+				<target>5</target>
+				<target>11</target>
+				<target>13</target>
+			</targets>
+			<angle>(pi - alpha) / 2</angle>
+		</action>
+		<action>
+			<p1>1</p1>
+			<p2>10</p2>
+			<targets>
+				<target>15</target>
+				<target>16</target>
+				<target>12</target>
+				<target>3</target>
+				<target>8</target>
+				<target>14</target>
+				<target>4</target>
+				<target>9</target>
+			</targets>
+			<angle>(pi - alpha) / 2</angle>
+		</action>
+		<action>
+			<p1>11</p1>
+			<p2>12</p2>
+			<targets>
+				<target>1</target>
+				<target>13</target>
+				<target>7</target>
+				<target>5</target>
+				<target>6</target>
+				<target>2</target>
+			</targets>
+			<angle>(alpha - pi) / 2</angle>
+		</action>
+		<action>
+			<p1>14</p1>
+			<p2>13</p2>
+			<targets>
+				<target>16</target>
+				<target>3</target>
+				<target>14</target>
+				<target>8</target>
+				<target>4</target>
+				<target>9</target>
+			</targets>
+			<angle>(alpha - pi) / 2</angle>
+		</action>
+		<action>
+			<p1></p1>
+			<p2></p2>
+			<targets>
+				<target></target>
+			</targets>
+			<angle></angle>
+		</action>
+	</actions>
+</airplane>
